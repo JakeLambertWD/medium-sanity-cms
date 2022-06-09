@@ -10,9 +10,8 @@ const Home: NextPage = () => {
 		<div className=''>
 			<Head>
 				<title>Medium 2.0</title>
-				<link rel='icon' href='/favicon.ico' />
+				<link rel='icon' href='https://cdn-icons-png.flaticon.com/512/5968/5968906.png' />
 			</Head>
-
 			<Header />
 		</div>
 	);
