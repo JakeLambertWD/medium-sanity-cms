@@ -3,7 +3,7 @@ import Link from 'next/link';
 export const Header = () => {
 	return (
 		<header className='bg-yellow-400 border-b-[1px] border-black'>
-			<div className='flex justify-between px-9 py-3 max-w-7xl mx-auto '>
+			<div className='flex justify-between px-9 py-3 max-w-7xl mx-auto'>
 				<Link href='/'>
 					<img src='https://miro.medium.com/max/8978/1*s986xIGqhfsN8U--09_AdA.png' className='object-contain cursor-pointer w-52' />
 				</Link>
