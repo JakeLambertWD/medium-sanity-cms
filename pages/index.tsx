@@ -7,11 +7,11 @@ import Link from 'next/link';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
 import { sanityClient, urlFor } from '../sanity';
-import { Post } from '../typings';
+import { PostTypes } from '../typings';
 
 // get types from the types file
 interface Props {
-	posts: [Post];
+	posts: [PostTypes];
 }
 
 export default function Home({ posts }: Props) {
