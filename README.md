@@ -5,3 +5,7 @@ npx create-next-app medium-app --example with-typescript
 # Sanity.io toolkit for Next.js
 
 npm i next-sanity
+
+# An easy way to render Portable Text block content in React applications.
+
+npm i react-portable-text
