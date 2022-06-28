@@ -9,3 +9,11 @@ npm i next-sanity
 # An easy way to render Portable Text block content in React applications.
 
 npm i react-portable-text
+
+# Performant, flexible and extensible forms with easy-to-use validation
+
+npm i react-hook-form
+
+# Sanity Client
+
+npm i @sanity/client
