@@ -77,6 +77,21 @@ function Post({ post }: Props) {
 
 			<hr className='max-w-lg mx-auto my-5 border border-yellow-500' />
 
+			{/* Comments */}
+			<div className='flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-yellow-500 shadow space-y-2'>
+				<h3 className='text-4xl'>Comments</h3>
+				<hr className='pb-2' />
+
+				{post.comments.map(comment => (
+					<div key={comment._id}>
+						<p>
+							<span className='text-yellow-500'>{comment.name}: </span>
+							{comment.comment}
+						</p>
+					</div>
+				))}
+			</div>
+
 			{submitted ? (
 				<div className='flex flex-col p-10 my-10 bg-yellow-500 text-white max-w-2xl mx-auto'>
 					<h3 className='text-3xl font-bold'>Thankyou for submitting your comment!</h3>
@@ -96,7 +111,6 @@ function Post({ post }: Props) {
 							{...register('name', { required: true })}
 							className='shadow border rounded py-2 px-3 mt-1 block w-full focus:outline-yellow-500'
 							type='text'
-							placeholder='Write here..'
 						/>
 					</label>
 					<label className='block mb-5'>
@@ -105,7 +119,6 @@ function Post({ post }: Props) {
 							{...register('email', { required: true })}
 							className='shadow border rounded py-2 px-3 mt-1 block w-full focus:outline-yellow-500'
 							type='email'
-							placeholder='Write here..'
 						/>
 					</label>
 					<label className='block mb-5'>
@@ -114,7 +127,6 @@ function Post({ post }: Props) {
 							{...register('comment', { required: true })}
 							className='shadow border rounded py-2 px-3 form-textarea mt-1 block w-full focus:outline-yellow-500'
 							rows={8}
-							placeholder='Write here..'
 						/>
 					</label>
 
@@ -131,21 +143,6 @@ function Post({ post }: Props) {
 					/>
 				</form>
 			)}
-
-			{/* Comments */}
-			<div className='flex flex-col p-10 my-10 max-w-2xl mx-auto shadow-yellow-500 shadow space-y-2'>
-				<h3 className='text-4xl'>Comments</h3>
-				<hr className='pb-2' />
-
-				{post.comments.map(comment => (
-					<div key={comment._id}>
-						<p>
-							<span className='text-yellow-500'>{comment.name}: </span>
-							{comment.comment}
-						</p>
-					</div>
-				))}
-			</div>
 		</main>
 	);
 }
